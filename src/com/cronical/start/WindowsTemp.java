@@ -1,4 +1,4 @@
-package Neu;
+package com.cronical.start;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.io.Reader;
 
 public class WindowsTemp {
 
-	public void WindowsTemplöschen() {
+	public void WindowsTemploeschen() {
 
 		String command = "RD /S / Q \"%homepath%\\AppData\\Local\\Temp";
 		String command2 = "RD /S / Q \"%windir%\\TEMP";

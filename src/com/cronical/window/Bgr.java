@@ -1,4 +1,4 @@
-package Neu;
+package com.cronical.window;
 
 import java.awt.Graphics;
 import java.awt.Image;
@@ -15,7 +15,7 @@ public class Bgr extends JPanel {
 	public Bgr() {
 
 		try {
-			bild1 = ImageIO.read(getClass().getResource("test.jpg"));
+			bild1 = ImageIO.read(getClass().getResource("/res/test2.jpg"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

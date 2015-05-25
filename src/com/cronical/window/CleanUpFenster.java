@@ -1,4 +1,4 @@
-package Neu;
+package com.cronical.window;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -6,6 +6,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
+import com.cronical.actions.DiskDefrag;
+import com.cronical.actions.FirefoxTemp;
+import com.cronical.actions.RunProcess;
+import com.cronical.start.WindowsTemp;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
@@ -39,20 +45,20 @@ public class CleanUpFenster extends JFrame implements ActionListener, MouseListe
 
 	public CleanUpFenster() {
 		try {
-			icon1 = ImageIO.read(getClass().getResource("gut5.png"));
+			icon1 = ImageIO.read(getClass().getResource("/res/gut5.png"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
 		try {
-			icon2 = ImageIO.read(getClass().getResource("gut4.png"));
+			icon2 = ImageIO.read(getClass().getResource("/res/gut4.png"));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		try {
-			icon3 = ImageIO.read(getClass().getResource("gut2.png"));
+			icon3 = ImageIO.read(getClass().getResource("/res/gut2.png"));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -74,7 +80,7 @@ public class CleanUpFenster extends JFrame implements ActionListener, MouseListe
 		setLocation(screenSize.width / 2 - screenSize.width / 4, screenSize.height / 2 - screenSize.height / 4);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		//Panel wird erstellt mit dem Layout null und bgr wird hinzugefügt
+		//Panel wird erstellt mit dem Layout null und bgr wird hinzugef?gt
 
 		panel1 = new Bgr();
 		panel1.setLayout(null);
@@ -92,7 +98,7 @@ public class CleanUpFenster extends JFrame implements ActionListener, MouseListe
 		button1.setContentAreaFilled(false);
 		button1.setBorder(null);
 
-		button2 = new JButton("Windows Temp löschen");
+		button2 = new JButton("Windows Temp loeschen");
 		button2.setIcon(new ImageIcon(icon1));
 		button2.setForeground(new Color(255, 255, 255, 220));
 		button2.setVerticalTextPosition(SwingConstants.CENTER);
@@ -100,7 +106,7 @@ public class CleanUpFenster extends JFrame implements ActionListener, MouseListe
 		button2.setContentAreaFilled(false);
 		button2.setBorderPainted(false);
 
-		button3 = new JButton("Firefox Temp löschen");
+		button3 = new JButton("Firefox Temp loeschen");
 		button3.setIcon(new ImageIcon(icon1));
 		button3.setForeground(new Color(255, 255, 255, 220));
 		button3.setVerticalTextPosition(SwingConstants.CENTER);
@@ -120,7 +126,7 @@ public class CleanUpFenster extends JFrame implements ActionListener, MouseListe
 
 		label = new JLabel("Bitte klicken Sie auf einen Button", JLabel.CENTER);
 
-		//set Visible für contentpane
+		//set Visible f?r contentpane
 
 		setVisible(true);
 
@@ -169,7 +175,7 @@ public class CleanUpFenster extends JFrame implements ActionListener, MouseListe
 
 		if (ae.getSource() == this.button1) {
 
-			//Objekt der Klasse RunProcess wird erstellt und die Methode Prozess ausgeführt
+			//Objekt der Klasse RunProcess wird erstellt und die Methode Prozess ausgef?hrt
 
 			RunProcess Prozess1 = new RunProcess();
 			Prozess1.Prozess();
@@ -181,20 +187,20 @@ public class CleanUpFenster extends JFrame implements ActionListener, MouseListe
 
 		else if (ae.getSource() == this.button2) {
 
-			//Objekt der Klasse Temp wird erstellt und die Methode Templöschen ausgeführt
+			//Objekt der Klasse Temp wird erstellt und die Methode Templöschen ausgef?hrt
 
 			WindowsTemp test = new WindowsTemp();
-			test.WindowsTemplöschen();
+			test.WindowsTemploeschen();
 
-			label.setText("Windows Temp gelöscht");
+			label.setText("Windows Temp geloescht");
 		}
 
 		else if (ae.getSource() == this.button3) {
 
 			FirefoxTemp FTemp = new FirefoxTemp();
-			FTemp.FirefoxTemplöschen();
+			FTemp.FirefoxTemploeschen();
 
-			label.setText("Firefox Temp wurde gelöscht");
+			label.setText("Firefox Temp wurde geloescht");
 		}
 
 		else if (ae.getSource() == this.button4) {
@@ -202,7 +208,7 @@ public class CleanUpFenster extends JFrame implements ActionListener, MouseListe
 			DiskDefrag scannen = new DiskDefrag();
 			scannen.defrag();
 
-			label.setText("GUI für Defragmentierung gestartet");
+			label.setText("GUI fuer Defragmentierung gestartet");
 		}
 	}
 

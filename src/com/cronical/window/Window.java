@@ -1,4 +1,4 @@
-package Neu;
+package com.cronical.window;
 
 import javax.swing.*;
 import java.awt.*;

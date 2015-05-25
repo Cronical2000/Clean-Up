@@ -1,6 +1,8 @@
-package Neu;
+package com.cronical.start;
 
-public class start {
+import com.cronical.window.CleanUpFenster;
+
+public class Start {
 	public static void main(String[] args) {
 		System.out.println("Willkommen bei CleanUp");
 		CleanUpFenster MainWindow = new CleanUpFenster();

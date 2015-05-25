@@ -1,4 +1,4 @@
-package Neu;
+package com.cronical.actions;
 
 import java.io.BufferedReader;
 import java.io.IOException;

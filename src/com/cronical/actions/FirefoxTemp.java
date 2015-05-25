@@ -1,4 +1,4 @@
-package Neu;
+package com.cronical.actions;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.io.Reader;
 
 public class FirefoxTemp {
 
-	public void FirefoxTemplöschen() {
+	public void FirefoxTemploeschen() {
 
 		String command = "taskkill /f /IM Firefox.exe";
 		String command2 = "RD /S / Q \"C:\\Users\\%USERNAME%\\AppData\\Local\\Mozilla\\Firefox\\Profiles";
@@ -23,12 +23,12 @@ public class FirefoxTemp {
 				System.out.println(Firefoxbeenden);
 			in.close();
 
-			String FirefoxTemplöschen;
+			String FirefoxTemploeschen;
 			Process nep2 = Runtime.getRuntime().exec("cmd /c " + command2);
 			Reader r2 = new InputStreamReader(nep2.getInputStream());
 			BufferedReader in2 = new BufferedReader(r2);
-			while ((FirefoxTemplöschen = in2.readLine()) != null)
-				System.out.println(FirefoxTemplöschen);
+			while ((FirefoxTemploeschen = in2.readLine()) != null)
+				System.out.println(FirefoxTemploeschen);
 			in.close();
 		}
 
